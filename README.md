@@ -16,12 +16,17 @@ This is an in progress wiki for findmydevice.
 [5. ❌ Known Issues](https://github.com/ColoursofOSINT/findmydevice#5--known-issues)
 
 ## 1. 📱 Introduction 
-FindMyDevice is an android app.
+FindMyDevice is an Android App that severs as a Free and Open Source alternative to Google’s FindMyDevice. It allows you track, wipe and issue other commands to your device when it's lost. 
 
-## 2. 💬 Notifications (SMS support) vs 🌐 Server
-The FindMyDevice 
-### 2.1 💬 Notifications (SMS support)
-### 2.2 🌐 Server
+## 2. 💬 SMS vs ⌨️ Messages vs 🌐 Server 
+FindMyDevice allows for commands and information to be sent and received via SMS, messaging apps and/or a server, depending on the configuration that has been set up.
+
+### 2.1 💬 SMS
+Text messages can be configured with a pin or known contact number. With a pin, any number can issue commands and receive information, assuming the pin is correct. With contact whitelisting, any chosen numbers can communicate with FindMyDevice. Both a pin and contact whitelisting can be configured simultaneously. In order for SMS to work, permissions to view SMS messages is required.  To view the full list of commands, go to the commands section of this wiki and see those marked with the SMS signal (💬)
+
+### 2.2 ⌨️ Messages
+
+### 2.3 🌐 Server
 ## 3. 🖥 Commands 
 ## 4. ⛓️ Extra Permissions
 ## 5. ❌ Known Issues
