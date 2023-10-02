@@ -54,6 +54,39 @@ fmd delete - resets the phone
 fmd camera (back/front) - takes a picture and sends it to the server
 ```
 
+FMD camera takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
+
+`fmd delete` is capable of deleting you phone.
+For this you have to configure a pin in the settings and enable this option. When you than send the command you have to add the pin at the end. 
+Like this:
+
+`fmd delete <your pin>`
+
+`FMD locate` will send you the coordinates of your phone.
+
+In order to work, the phone needs Location enabled or this [Permission](PERMISSION WRITE_SECURE_SETTINGS) enabled.
+
+The application send the GSM_Informations (MCC, MNC, LAC, CID). These are the information about the cellular_tower you are connected with. You can get the location of this tower by searching on http://www.cell2gps.com/ or if you have added your [OpenCellID_API_KEY](OpenCellID_API_KEY) you can even configure FMD to send you the coordinates.
+
+The GPS-Coordinates will be send as soon as they are available to the device.
+
+`FMD locate last` will send you the last known location
+
+`FMD locate gps` will only send you the gps coordinates
+
+`FMD locate cell` will only send you the cell location.
+
+`fmd lock` locks the device and displays a message that you can configure in the settings.
+
+If you lost you device and didn't configured a message you can just write `fmd lock (your message)` and it will be shown.
+
+After locking your phone a splashscreen with your preconfigured or send via sms message will be shown. You are now locked out of your phone and are able to move to the lockscreen of android via the android controls     `○   <`. Now you can enter your pin, password, fingerprint or other locking method and unlock your phone.
+
+`fmd ring` lets the phone ring with you default ringtone.
+
+The phone will ring for 15 seconds. 
+If you send `fmd ring long` it will ring for 3 minutes.
+
 ## 4. Settings
 ### FMD delete
 Here you can enable or disable the `fmd delete` command.
@@ -65,7 +98,6 @@ Here you can enter a Pin. The pin is useful for "fmd delete" and for "fmd via pi
 
 ### fmd lock and Lock Screen Message
 Here you can write a message that can be displayed on the lockscreen when you send the command 'fmd lock'.
-
 
 ### fmd command
 Here you can change the default command for communicating with fmd. If you change the command you need to use your custom command for communication.
@@ -80,43 +112,8 @@ Add some features by enabling their permission, you can do this by pressing the 
 ## 5. ⛓️ Extra Permissions
 ## 6. ❌ Known Issues
 
-1. FMD camera takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
 
-2. `fmd delete` is capable of deleting you phone.
-For this you have to configure a pin in the settings and enable this option.
-
-When you than send the command you have to add the pin at the end. 
-Like this:
-
-`fmd delete <your pin>`
-
-3. `FMD locate` will send you the coordinates of your phone.
-
-In order to work, the phone needs Location enabled or this [Permission](PERMISSION WRITE_SECURE_SETTINGS) enabled.
-
-The application send the GSM_Informations (MCC, MNC, LAC, CID). These are the information about the cellular_tower you are connected with. You can get the location of this tower by searching on http://www.cell2gps.com/ or if you have added your [OpenCellID_API_KEY](OpenCellID_API_KEY) you can even configure FMD to send you the coordinates.
-
-The GPS-Coordinates will be send as soon as they are available to the device.
-
-`FMD locate last` will send you the last known location
-
-`FMD locate gps` will only send you the gps coordinates
-
-`FMD locate cell` will only send you the cell location.
-
-3. `fmd lock` locks the device and displays a message that you can configure in the settings.
-
-If you lost you device and didn't configured a message you can just write `fmd lock (your message)` and it will be shown.
-
-After locking your phone a splashscreen with your preconfigured or send via sms message will be shown. You are now locked out of your phone and are able to move to the lockscreen of android via the android controls     `○   <`. Now you can enter your pin, password, fingerprint or other locking method and unlock your phone.
-
-4. `fmd ring` lets the phone ring with you default ringtone.
-
-The phone will ring for 15 seconds.
-
-If you send `fmd ring long` it will ring for 3 minutes.
-
-5. FMD Server allows to store the last locations of you phone.
+FMD Server allows to store the last locations of you phone.
 
 When enabled your phone constantly sends e2e encrypted your location to the server where you can than access it from a webbrowser.
 
