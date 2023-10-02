@@ -1,14 +1,14 @@
 # findmydevice Wiki Revambed
 This is an in progress wiki for findmydevice
 
-## Introduction 
+## 1. Introduction 
 
-## Notification (SMS support) 💬 vs Server 🌐 
-### Notification (SMS support) 💬
-### Server 🌐 
-## Commands 
-## Extra Permissions
-## Known Issues
+## 2. Notification (SMS support) 💬 vs Server 🌐 
+### 2.1 Notification (SMS support) 💬
+### 2.2 Server 🌐 
+## 3. Commands 
+## 4. Extra Permissions
+## 5. Known Issues
 
 
 1. FMD camera takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
