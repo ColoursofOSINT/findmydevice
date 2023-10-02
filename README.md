@@ -1,13 +1,19 @@
 # Findmydevice Wiki 
 This is an in progress wiki for findmydevice.
 
-[1. 📱 Introduction]()
-[2. 💬 Notifications (SMS support) vs 🌐 Server]()
-[2.1 💬 Notifications (SMS support)]()
-[2.2 🌐 Server]()
-[3. 🖥 Commands]()
-[4. ⛓️ Extra Permissions]()
-[5. ❌ Known Issues]()
+[1. 📱 Introduction](https://github.com/ColoursofOSINT/findmydevice#1--introduction)
+
+[2. 💬 Notifications (SMS support) vs 🌐 Server](https://github.com/ColoursofOSINT/findmydevice#2--notifications-sms-support-vs--server)
+
+[2.1 💬 Notifications (SMS support)](https://github.com/ColoursofOSINT/findmydevice#21--notifications-sms-support)
+
+[2.2 🌐 Server](https://github.com/ColoursofOSINT/findmydevice#22--server)
+
+[3. 🖥 Commands](https://github.com/ColoursofOSINT/findmydevice#3--commands)
+
+[4. ⛓️ Extra Permissions](https://github.com/ColoursofOSINT/findmydevice#4-%EF%B8%8F-extra-permissions)
+
+[5. ❌ Known Issues](https://github.com/ColoursofOSINT/findmydevice#5--known-issues)
 
 ## 1. 📱 Introduction 
 ## 2. 💬 Notifications (SMS support) vs 🌐 Server
