@@ -54,21 +54,8 @@ fmd delete - resets the phone
 fmd camera (back/front) - takes a picture and sends it to the server
 ```
 
-FMD camera takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
-
-`fmd delete` is capable of deleting you phone.
-For this you have to configure a pin in the settings and enable this option. When you than send the command you have to add the pin at the end. 
-Like this:
-
-`fmd delete <your pin>`
-
-`FMD locate` will send you the coordinates of your phone.
-
-In order to work, the phone needs Location enabled or this [Permission](PERMISSION WRITE_SECURE_SETTINGS) enabled.
-
-The application send the GSM_Informations (MCC, MNC, LAC, CID). These are the information about the cellular_tower you are connected with. You can get the location of this tower by searching on http://www.cell2gps.com/ or if you have added your [OpenCellID_API_KEY](OpenCellID_API_KEY) you can even configure FMD to send you the coordinates.
-
-The GPS-Coordinates will be send as soon as they are available to the device.
+#### FMD Locate
+`FMD locate` will send you the coordinates of your phone. In order to work, the phone needs Location enabled or this [Permission](PERMISSION WRITE_SECURE_SETTINGS) enabled. The application send the GSM_Informations (MCC, MNC, LAC, CID). These are the information about the cellular_tower you are connected with. You can get the location of this tower by searching on http://www.cell2gps.com/ or if you have added your [OpenCellID_API_KEY](OpenCellID_API_KEY) you can even configure FMD to send you the coordinates. The GPS-Coordinates will be send as soon as they are available to the device.
 
 `FMD locate last` will send you the last known location
 
@@ -76,16 +63,25 @@ The GPS-Coordinates will be send as soon as they are available to the device.
 
 `FMD locate cell` will only send you the cell location.
 
-`fmd lock` locks the device and displays a message that you can configure in the settings.
-
-If you lost you device and didn't configured a message you can just write `fmd lock (your message)` and it will be shown.
-
-After locking your phone a splashscreen with your preconfigured or send via sms message will be shown. You are now locked out of your phone and are able to move to the lockscreen of android via the android controls     `○   <`. Now you can enter your pin, password, fingerprint or other locking method and unlock your phone.
-
+#### FMD Ring
 `fmd ring` lets the phone ring with you default ringtone.
 
-The phone will ring for 15 seconds. 
-If you send `fmd ring long` it will ring for 3 minutes.
+The phone will ring for 15 seconds. If you send `fmd ring long` it will ring for 3 minutes.
+
+#### FMD Lock
+`fmd lock` locks the device and displays a message that you can configure in the settings. If you lost you device and didn't configured a message you can just write `fmd lock (your message)` and it will be shown. After locking your phone a splashscreen with your preconfigured or send via sms message will be shown. You are now locked out of your phone and are able to move to the lockscreen of android via the android controls     `○   <`. Now you can enter your pin, password, fingerprint or other locking method and unlock your phone.
+
+#### FMD stats 
+
+#### FMD Delete
+`fmd delete` is capable of deleting you phone. For this you have to configure a pin in the settings and enable this option. When you than send the command you have to add the pin at the end. 
+For example:
+
+`fmd delete <your pin>`
+
+#### FMD Camera
+`fmd camera` takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
+
 
 ## 4. Settings
 ### FMD delete
