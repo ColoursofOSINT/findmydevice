@@ -72,6 +72,7 @@ The phone will ring for 15 seconds. If you send `fmd ring long` it will ring for
 `fmd lock` locks the device and displays a message that you can configure in the settings. If you lost you device and didn't configured a message you can just write `fmd lock (your message)` and it will be shown. After locking your phone a splashscreen with your preconfigured or send via sms message will be shown. You are now locked out of your phone and are able to move to the lockscreen of android via the android controls     `○   <`. Now you can enter your pin, password, fingerprint or other locking method and unlock your phone.
 
 #### FMD stats 
+`fmd stats` shows you the networks available to the lost device. This is helpful when you get desperate, maybe you recognize a network and can find the device than.
 
 #### FMD Delete
 `fmd delete` is capable of deleting you phone. For this you have to configure a pin in the settings and enable this option. When you than send the command you have to add the pin at the end. 
