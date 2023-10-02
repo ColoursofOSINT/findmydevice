@@ -16,6 +16,8 @@ This is an in progress wiki for findmydevice.
 [5. ❌ Known Issues](https://github.com/ColoursofOSINT/findmydevice#5--known-issues)
 
 ## 1. 📱 Introduction 
+FindMyDevice is an android app.
+
 ## 2. 💬 Notifications (SMS support) vs 🌐 Server
 The FindMyDevice 
 ### 2.1 💬 Notifications (SMS support)
