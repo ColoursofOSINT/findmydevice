@@ -3,8 +3,17 @@ This is an in progress wiki for findmydevice
 
 ## 1. Introduction 
 
-## 2. Notification (SMS support) 💬 vs Server 🌐 
-### 2.1 Notification (SMS support) 💬
+## [2. Notifications (SMS support) 💬 vs Server 🌐]()
+### [2.1 Notifications (SMS support) 💬]()
+### [2.2 Server 🌐]()
+## [3. Commands]()
+## [4. Extra Permissions]()
+## [5. Known Issues]()
+
+
+## 2. Notifications (SMS support) 💬 vs Server 🌐 
+The FindMyDevice 
+### 2.1 Notifications (SMS support) 💬
 ### 2.2 Server 🌐 
 ## 3. Commands 
 ## 4. Extra Permissions
