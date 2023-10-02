@@ -22,10 +22,12 @@ FindMyDevice is an Android App that severs as a Free and Open Source alternative
 FindMyDevice allows for commands and information to be sent and received via SMS, messaging apps and/or a server, depending on the configuration that has been set up.
 
 ### 2.1 💬 SMS
-Text messages can be configured with a pin or known contact number. With a pin, any number can issue commands and receive information, assuming the pin is correct. With contact whitelisting, any chosen numbers can communicate with FindMyDevice. Both a pin and contact whitelisting can be configured simultaneously. In order for SMS to work, permissions to view SMS messages is required.  To view the full list of commands, go to the commands section of this wiki and see those marked with the SMS signal (💬)
+Text messages can be configured with a pin or known contact number. With a pin, any number can issue commands and receive information, assuming the pin is correct. With contact whitelisting, any chosen numbers can communicate with FindMyDevice. Both a pin and contact whitelisting can be configured simultaneously. In order for SMS to work, permissions to view SMS messages is required.  To view the full list of commands, go to the commands section of this wiki and see those marked with the SMS signal (💬). 
+
+A pin allows you to communicate with fmd with a non-whitelisted contact. If you activate this setting and set a pin you can communicate using a phonenumber that is not added to the whitelist. Just text `fmd (pin)` and the sender's phone number is put on a temporary whitelist. The session expires after 10 minutes and than no communication is possible anymore. If you need more time, you can reactivate the number with the pin again.
 
 ### 2.2 ⌨️ Messages
-With access to notifications, FindMyDevice can handle messages from other applications. Some applications will not work, but supported messaging apps include Telegram, and Whatsapp.
+With access to notifications, FindMyDevice can handle messages from other applications. Some applications will not work, but supported messaging apps include Telegram and Whatsapp.
 
 ### 2.3 🌐 Server
 A server can be configured to use a server to issue commands and receive information. When enabled your phone constantly sends end-to-end encrypted your location to the server where you can than access it from a webbrowser. Your data is encrypted on the phone (with a generated private key) and than sent to the server. The server also has the privat key in an encrypted state that will be send to your webbrowser. The webbrowser than decrypts the key with your password and afterwards the data is decrypted and shown to you.
@@ -36,14 +38,24 @@ When you register you need to enter a password, this password will be needed on 
 
 One can also enable FMDServer (the checkbox at the top) that allows the application to constantly send the location to FMDServer (every custom period).
 
-Push 
 In order to receive a command from the server (locate/ring/etc...) unified push is used, therefore you need to install a distributor (like Gotify-UP or ntfy). When you send a command like ring, the server will communicate with your push-server. The push-sever will notify your phone.
 If you want to, you can register for my push-server (gotify-instance) (https://push.nulide.de:9094/#/login).
 
-## 3. 🖥 Commands 
-## 4. ⛓️ Extra Permissions
-## 5. ❌ Known Issues
+## 3. 🖥 Commands
 
+You can set a custom prefix (default is fmd). Commands are:
+
+fmd locate - sends the current location
+fmd ring - lets the phone ring
+fmd lock - locks the phone
+fmd stats - sends device informtions
+fmd delete - resets the phone
+fmd camera (back/front) - takes a picture and sends it to the server
+
+## 4. Settings
+
+## 5. ⛓️ Extra Permissions
+## 6. ❌ Known Issues
 
 1. FMD camera takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
 
