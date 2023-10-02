@@ -107,6 +107,47 @@ Here you can add the API-Key from OpenCellID. With their service you can get the
 Add some features by enabling their permission, you can do this by pressing the button, which will open the Permission-Wizard.
 
 ## 5. ⛓️ Extra Permissions
+9. For FMD to be able to turn Location Services on or off the special [`WRITE_SECURE_SETTINGS` permission](https://developer.android.com/reference/android/Manifest.permission#WRITE_SECURE_SETTINGS) is needed.
+
+## Option 1: Grant from computer
+
+To grant the permission from a computer via adb (Android Debug Bridge):
+
+1. Install `adb` on your computer (e.g. `sudo apt-get install android-tools-adb`)
+2. Enable Developer Settings on you device. Go to "Settings -> About Phone" and than click several times on "Build Number". You will be asked to enter your password if you have one.
+3. Go to "System -> Developer Options" and enable "USB debugging"
+4. Plug your phone into the computer
+5. Open a terminal/cmd on your computer
+6. Check that your device shows up by entering this command: `adb devices`
+7. Grant the permission by entering this command:
+
+`adb shell pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS`
+
+If adb returns an error like in [#15](https://gitlab.com/Nulide/findmydevice/-/issues/15)
+you can try the following:
+
+1. Go to Developer Settings
+2. Enable USB-Debugging
+3. Enable Install via USB
+4. Enable USB-Debugging (Security Settings)
+5. Rerun `adb shell pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS`
+
+## Option 2: Grant on device (requires root)
+
+If you have a rooted device, you can use any terminal app to grant the permission:
+
+1. Open your terminal app of choice
+2. Run `su -c 'pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS'`
+
+## Check that it worked
+
+To check that it worked:
+
+1. Close FMD
+2. Swipe it away from Recents
+3. Reopen FMD
+
+Under "Permissions" the entry "Secure Settings" should now be green.
 ## 6. ❌ Known Issues
 
 
@@ -151,89 +192,16 @@ This is helpful when you get desperate, maybe you recognize a network and can fi
 
 Here you will find some explanations how FMD works and how to configure it by your needs.
 
-## Syntax
-
-To start:
-
-FMD is an application that can search for your device when it gets lost.
-
-In order to find your device you need to have installed the application onto the device and add some of your contacts to your whitelist. When your device gets lost, just let one of your whitelist-contacts write a sms to your phone that starts with **fmd**.
-
-Than the Syntax will be send to you. This may look like this:
-
-```plaintext
-FindMyDevice Commands:
-fmd locate - sends the current location
-fmd ring - lets the phone ring
-fmd lock - locks the  phone
-fmd stats - sends device informtions
-fmd delete - resets the phone
-fmd camera (back/front) - takes a picture and sends it to the server
-```
-
-You can send these commands as sms to the device so the action will be executed. If you want to see what the commands do you just select one:
-
-- [FMD locate](FMD%20locate)
-- [FMD ring](FMD%20ring)
-- [FMD lock](FMD%20lock)
-- [FMD stats](FMD%20stats)
-- [FMD delete](FMD%20delete)
-- [FMD camera](FMD%20camera)
-
-The Settings that you can tweak in FMD are explained on the following page: [Settings](Settings)
-
 ## Interesting
 
 * [ThirdParty Support](ThirdParty)
 * [Push Support (UnifiedPush/ntfy)](PushSupport)
 
-8. OpenCellID is a collection of celltower and there location.
+ OpenCellID is a collection of celltower and there location.
 You can register on their [page](https://opencellid.org/) and retrieve an API_KEY.
 After you've created an account go to Access Tokens and copy the token. (Something like: pk.xxxxx)
 
 Please enter this key to the settings of the application. When you than try to get the location the coordinates of the celltower will be send too.
-
-9. For FMD to be able to turn Location Services on or off the special [`WRITE_SECURE_SETTINGS` permission](https://developer.android.com/reference/android/Manifest.permission#WRITE_SECURE_SETTINGS) is needed.
-
-## Option 1: Grant from computer
-
-To grant the permission from a computer via adb (Android Debug Bridge):
-
-1. Install `adb` on your computer (e.g. `sudo apt-get install android-tools-adb`)
-2. Enable Developer Settings on you device. Go to "Settings -> About Phone" and than click several times on "Build Number". You will be asked to enter your password if you have one.
-3. Go to "System -> Developer Options" and enable "USB debugging"
-4. Plug your phone into the computer
-5. Open a terminal/cmd on your computer
-6. Check that your device shows up by entering this command: `adb devices`
-7. Grant the permission by entering this command:
-
-`adb shell pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS`
-
-If adb returns an error like in [#15](https://gitlab.com/Nulide/findmydevice/-/issues/15)
-you can try the following:
-
-1. Go to Developer Settings
-2. Enable USB-Debugging
-3. Enable Install via USB
-4. Enable USB-Debugging (Security Settings)
-5. Rerun `adb shell pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS`
-
-## Option 2: Grant on device (requires root)
-
-If you have a rooted device, you can use any terminal app to grant the permission:
-
-1. Open your terminal app of choice
-2. Run `su -c 'pm grant de.nulide.findmydevice android.permission.WRITE_SECURE_SETTINGS'`
-
-## Check that it worked
-
-To check that it worked:
-
-1. Close FMD
-2. Swipe it away from Recents
-3. Reopen FMD
-
-Under "Permissions" the entry "Secure Settings" should now be green.
 
 10.n FMD uses [UnifiedPush](https://unifiedpush.org/) to receive push notifications.
 Hence you need to have a [distributor app](https://unifiedpush.org/users/distributors/) installed on your phone if you want to use push.
