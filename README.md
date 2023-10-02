@@ -25,8 +25,21 @@ FindMyDevice allows for commands and information to be sent and received via SMS
 Text messages can be configured with a pin or known contact number. With a pin, any number can issue commands and receive information, assuming the pin is correct. With contact whitelisting, any chosen numbers can communicate with FindMyDevice. Both a pin and contact whitelisting can be configured simultaneously. In order for SMS to work, permissions to view SMS messages is required.  To view the full list of commands, go to the commands section of this wiki and see those marked with the SMS signal (💬)
 
 ### 2.2 ⌨️ Messages
+With access to notifications, FindMyDevice can handle messages from other applications. Some applications will not work, but supported messaging apps include Telegram, and Whatsapp.
 
 ### 2.3 🌐 Server
+A server can be configured to use a server to issue commands and receive information. When enabled your phone constantly sends end-to-end encrypted your location to the server where you can than access it from a webbrowser. Your data is encrypted on the phone (with a generated private key) and than sent to the server. The server also has the privat key in an encrypted state that will be send to your webbrowser. The webbrowser than decrypts the key with your password and afterwards the data is decrypted and shown to you.
+
+You can run use the defaut server [here](https://fmd.nulide.de:1008/), or you can a custom sever either writen in [Go](https://gitlab.com/Nulide/findmydeviceserver) (the offical implementation) or [PHP](https://gitlab.com/Playit3110/FindMyDeviceServerPHP). 
+
+When you register you need to enter a password, this password will be needed on the webpage to decrypt the locationdata. When you are registered, everytime your phone gets located the location will also be transmitted to the FMDServer. After you have registered your phone, please note your custom User ID somewhere safe. You need this User ID to locate your phone. The userid is a generated random ID from the server so the data can be identified as anonymously. 
+
+One can also enable FMDServer (the checkbox at the top) that allows the application to constantly send the location to FMDServer (every custom period).
+
+Push 
+In order to receive a command from the server (locate/ring/etc...) unified push is used, therefore you need to install a distributor (like Gotify-UP or ntfy). When you send a command like ring, the server will communicate with your push-server. The push-sever will notify your phone.
+If you want to, you can register for my push-server (gotify-instance) (https://push.nulide.de:9094/#/login).
+
 ## 3. 🖥 Commands 
 ## 4. ⛓️ Extra Permissions
 ## 5. ❌ Known Issues
