@@ -44,15 +44,52 @@ If you want to, you can register for my push-server (gotify-instance) (https://p
 ## 3. 🖥 Commands
 
 You can set a custom prefix (default is fmd). Commands are:
-
+```
 fmd locate - sends the current location
 fmd ring - lets the phone ring
 fmd lock - locks the phone
 fmd stats - sends device informtions
 fmd delete - resets the phone
 fmd camera (back/front) - takes a picture and sends it to the server
+```
 
 ## 4. Settings
+FMD delete
+ 
+Here you can enable or disable the `fmd delete` command.
+You enable this setting, when you activated the device admin, but don't want to remotely reset your phone.
+If this option is disabled the device can't be reseted via fmd.
+
+## Pin
+
+Here you can enter a Pin. The pin is useful for "fmd delete" and for "fmd via pin". If no pin is entered "fmd delete" and "fmd via pin" will not work.
+
+## fmd lock
+
+### LockscreenMessage
+
+Here you can write a message that can be displayed on the lockscreen when you send the command 'fmd lock'.
+
+
+## fmd command
+
+Here you can change the default command for communicating with fmd.
+if you change the command you need to use your custom_command for communication.
+
+## OpenCellID
+
+### API-Key
+
+Here you can add the API-Key from OpenCellID.
+With their service you can get the coordinates of the celltower you are conected with.
+Please look at [API-Key](OpenCellID_API_KEY) for instructions.
+
+## Permissions
+
+You want to add some features by enabling their permission?
+You can do this by pressing the button.
+This will open the Permission-Wizard.
+
 
 ## 5. ⛓️ Extra Permissions
 ## 6. ❌ Known Issues
@@ -232,55 +269,6 @@ No sensitive data is sent in push notifications, they are only used to wake up F
 
 1. Configure the ntfy server in the **ntfy app** under Settings -> Default Server
 2. Make sure that you have enabled anonymous write access to `up*` topics: https://docs.ntfy.sh/config/#example-unifiedpush
-
-11. There are some Settings you can tweak.
-Here are some better and longer explanations what the settings do.
-
-## FMD delete
-
-Here you can enable or disable the `fmd delete` command.
-You enable this setting, when you activated the device admin, but don't want to remotely reset your phone.
-If this option is disabled the device can't be reseted via fmd.
-
-## FMD via Pin
-
-This setting allows you to communicate with fmd with a non-whitelisted contact.
-If you activate this setting and set a pin you can communicate with fmd with a phonenumber that is not added to the whitelist.
-Just write `fmd (pin)` and the phonenumber you have just used is put to a temporary whitelist. This number can than communicate with fmd just like the other phonenumbers that are in the whitelist. The session expires after 10 minutes and than no communication is possible anymore.
-If you need more time. You can reactivate the number with the pin again.
-This can be helpful when you are outside and no friend is near you that is whitelisted.
-You can than ask anybody for help and can activate their phonenumber via the pin.
-I strongly recommend to change the pin, when this was used.
-
-## Pin
-
-Here you can enter a Pin. The pin is useful for "fmd delete" and for "fmd via pin". If no pin is entered "fmd delete" and "fmd via pin" will not work.
-
-## fmd lock
-
-### LockscreenMessage
-
-Here you can write a message that can be displayed on the lockscreen when you send the command 'fmd lock'.
-
-
-## fmd command
-
-Here you can change the default command for communicating with fmd.
-if you change the command you need to use your custom_command for communication.
-
-## OpenCellID
-
-### API-Key
-
-Here you can add the API-Key from OpenCellID.
-With their service you can get the coordinates of the celltower you are conected with.
-Please look at [API-Key](OpenCellID_API_KEY) for instructions.
-
-## Permissions
-
-You want to add some features by enabling their permission?
-You can do this by pressing the button.
-This will open the Permission-Wizard.
 
 13.Third Party apps that show notification can be used in fmd.
 
