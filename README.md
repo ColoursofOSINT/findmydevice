@@ -44,6 +44,7 @@ If you want to, you can register for my push-server (gotify-instance) (https://p
 ## 3. 🖥 Commands
 
 You can set a custom prefix (default is fmd). Commands are:
+
 ```
 fmd locate - sends the current location
 fmd ring - lets the phone ring
@@ -54,42 +55,27 @@ fmd camera (back/front) - takes a picture and sends it to the server
 ```
 
 ## 4. Settings
-FMD delete
- 
+### FMD delete
 Here you can enable or disable the `fmd delete` command.
 You enable this setting, when you activated the device admin, but don't want to remotely reset your phone.
 If this option is disabled the device can't be reseted via fmd.
 
-## Pin
-
+### Pin
 Here you can enter a Pin. The pin is useful for "fmd delete" and for "fmd via pin". If no pin is entered "fmd delete" and "fmd via pin" will not work.
 
-## fmd lock
-
-### LockscreenMessage
-
+### fmd lock and Lock Screen Message
 Here you can write a message that can be displayed on the lockscreen when you send the command 'fmd lock'.
 
 
-## fmd command
+### fmd command
+Here you can change the default command for communicating with fmd. If you change the command you need to use your custom command for communication.
 
-Here you can change the default command for communicating with fmd.
-if you change the command you need to use your custom_command for communication.
-
-## OpenCellID
-
+### OpenCellID
 ### API-Key
+Here you can add the API-Key from OpenCellID. With their service you can get the coordinates of the celltower you are conected with. Please look at [API-Key](OpenCellID_API_KEY) for instructions.
 
-Here you can add the API-Key from OpenCellID.
-With their service you can get the coordinates of the celltower you are conected with.
-Please look at [API-Key](OpenCellID_API_KEY) for instructions.
-
-## Permissions
-
-You want to add some features by enabling their permission?
-You can do this by pressing the button.
-This will open the Permission-Wizard.
-
+### Permissions
+Add some features by enabling their permission, you can do this by pressing the button, which will open the Permission-Wizard.
 
 ## 5. ⛓️ Extra Permissions
 ## 6. ❌ Known Issues
