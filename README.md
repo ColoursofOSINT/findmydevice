@@ -26,6 +26,8 @@ Text messages can be configured with a pin or known contact number. With a pin, 
 
 A pin allows you to communicate with fmd with a non-whitelisted contact. If you activate this setting and set a pin you can communicate using a phonenumber that is not added to the whitelist. Just text `fmd (pin)` and the sender's phone number is put on a temporary whitelist. The session expires after 10 minutes and than no communication is possible anymore. If you need more time, you can reactivate the number with the pin again.
 
+![image](https://raw.githubusercontent.com/ColoursofOSINT/findmydevice/main/image/1.png)
+
 ### 2.2 ⌨️ Messages
 With access to notifications, FindMyDevice can handle messages from other applications. Some applications will not work, but supported messaging apps include Telegram and Whatsapp.
 
