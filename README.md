@@ -36,6 +36,8 @@ A server can be configured to use a server to issue commands and receive informa
 
 You can run use the defaut server [here](https://fmd.nulide.de:1008/), or you can a custom sever either writen in [Go](https://gitlab.com/Nulide/findmydeviceserver) (the offical implementation) or [PHP](https://gitlab.com/Playit3110/FindMyDeviceServerPHP). 
 
+![image](https://raw.githubusercontent.com/ColoursofOSINT/findmydevice/main/image/2.png)
+
 When you register you need to enter a password, this password will be needed on the webpage to decrypt the locationdata. When you are registered, everytime your phone gets located the location will also be transmitted to the FMDServer. After you have registered your phone, please note your custom User ID somewhere safe. You need this User ID to locate your phone. The userid is a generated random ID from the server so the data can be identified as anonymously. 
 
 One can also enable FMDServer (the checkbox at the top) that allows the application to constantly send the location to FMDServer (every custom period).
@@ -220,9 +222,9 @@ No sensitive data is sent in push notifications, they are only used to wake up F
 1. Configure the ntfy server in the **ntfy app** under Settings -> Default Server
 2. Make sure that you have enabled anonymous write access to `up*` topics: https://docs.ntfy.sh/config/#example-unifiedpush
 
-13.Third Party apps that show notification can be used in fmd.
+## Third Party Messaging Apps
 
-If you have enabled the Notificationoption in fmd this happens automatically.
+If you have enabled the notification option in fmd this happens automatically.
 
 Since the whitelist cannot be used for identification the pin is needed and has to be set.
 
@@ -232,33 +234,11 @@ So the command for locate will look like this if communicating via a third party
 
 `fmd topsecretpin locate`
 
-14. The problem in this versions was, that for authentication i just could let the user try to decrypt the private-key. If he succeeds he would have access to the data, cause he an decrypt the data with the private-key. The private-key is encrypted with aes-256. So it's technically impossible somebody could brute-force it.
-
-The problem is that even when the user does not decrypt the private-key he could download all the data from the server, cause i didn't add an authenticator like a token or something similar (my fault). As long as he manages to find out an device-id. So that's the first problem. I wasn't able to guarantee that only the user has access to the data.
-
-The second one is, that due to the fact, that there is no token or something similar, every device could send data to the server and saves them. That means an attacker could send a data package to the server and it will be saved to folder with the id he transfers. As mentioned earlier, as long as the attacker finds out one id he can download the data(but can't view it) and upload data(that's critical).
-
-
-To fix this a re registration is needed. (also to guarantee that no malicious data is on the server.
-Now when somebody registers, the device sends besides the encrypted private-key a hash of the password and the publickey.
-The publickey will be needed for the furture(more secure authentifiation)
-When somebody wants to access the data. he has to send a hash of the passowrd and the id of the device he wants to get access to, than the server checks if the data matches and grants access to the data. With the password he can than decrypt the data that server will send.
-Still the data is end to end encrypted.
-
-15. Here is a list of solutions that may help you when you are stuck.
+## Here is a list of solutions that may help you when you are stuck.
 
 ### Using multiple users on the same device.
 
-If you are using multiple users on the same device, fmd may not work.
-To solve this install fmd on all users and allow them to use sms.
-You can do so in the user-settings.
-Also if you don't want to receive multiple messages change the fmd_command for every user to a different one.
-
-### Using Signal
-
-This is not really a workaround but may happen to some of you.
-When a device wants to communicate with fmd via the messaging app signal, please note that you need to send the message as sms.
-Therefore you need to hold the blue sending button and select "Insecure SMS".
+If you are using multiple users on the same device, FMD may not work. To solve this install FMD on all users and allow them to use sms. You can do so in the user-settings. Also if you don't want to receive multiple messages change the fmd_command for every user to a different one.
 
 ### RCS
 
@@ -266,4 +246,4 @@ If you try to message FMD via RCS (Rich Communications System), FMD will not res
 
 ### Multi-SIM
 
-If you have more than one SIM-card inserted, please select the default sim for sms-messaging in your settings app, so fmd can automatically send data via SMS.
+If you have more than one SIM-card inserted, please select the default sim for sms-messaging in your settings app, so FMD can automatically send data via SMS.
