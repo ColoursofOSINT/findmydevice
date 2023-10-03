@@ -64,7 +64,7 @@ fmd camera (back/front) - takes a picture and sends it to the server
 `FMD locate cell` will only send you the cell location.
 
 #### FMD Ring
-`fmd ring` lets the phone ring with you default ringtone.
+`fmd ring` lets the phone ring with your default ringtone.
 
 The phone will ring for 15 seconds. If you send `fmd ring long` it will ring for 3 minutes.
 
