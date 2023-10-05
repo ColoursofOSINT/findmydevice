@@ -211,9 +211,7 @@ Please enter this key to the settings of the application. When you than try to g
 Hence you need to have a [distributor app](https://unifiedpush.org/users/distributors/) installed on your phone if you want to use push.
 Then FMD Server will act as the *application server*, and e.g. ntfy Server will act as the *push server*.
 
-The recommended one is [ntfy](https://ntfy.sh/), but other UnifiedPush distributor apps should work, too.
-
-After installing a push distributor app, remove FMD from the "Recent Apps" switcher by swiping it away, and then reopen it. This forces FMD to retry registering itself with the distributor.
+The recommended one is [ntfy](https://ntfy.sh/), but other UnifiedPush distributor apps should work, too. After installing a push distributor app, remove FMD from the "Recent Apps" switcher by swiping it away, and then reopen it. This forces FMD to retry registering itself with the distributor.
 
 No sensitive data is sent in push notifications, they are only used to wake up FMD.
 
