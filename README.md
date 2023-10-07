@@ -16,7 +16,7 @@ This is an in progress wiki for findmydevice.
 [5. ❌ Known Issues](https://github.com/ColoursofOSINT/findmydevice#5--known-issues)
 
 ## 1. 📱 Introduction 
-FindMyDevice is an Android App that severs as a Free and Open Source alternative to Google’s FindMyDevice. It allows you track, wipe and issue other commands to your device when it's lost. 
+FindMyDevice is an Android App that severs as a Free and Open Source alternative to Google’s FindMyDevice. It allows you track, wipe and issue other commands to your device when its lost. 
 
 ## 2. 💬 SMS vs ⌨️ Messages vs 🌐 Server 
 FindMyDevice allows for commands and information to be sent and received via SMS, messaging apps and/or a server, depending on the configuration that has been set up.
@@ -188,13 +188,6 @@ In order to receive a command from the server (locate/ring/etc...) unified push 
 In order to use it you need to install a distributor (like Gotify-**UP** or ntfy).
 When you send a command like ring. The server will communicate with your push-server. The push-sever will notify your phone.
 If you want to, you can register for my push-server(gotify-instance) (https://push.nulide.de:9094/#/login)
-
-6. `fmd stats` shows you the networks available to the lost device.
-This is helpful when you get desperate, maybe you recognize a network and can find the device than.
-
-7. Hello, this is the wiki for FMD.
-
-Here you will find some explanations how FMD works and how to configure it by your needs.
 
 ## Interesting
 
