@@ -18,6 +18,10 @@ This is an in progress wiki for findmydevice.
 ## 1. 📱 Introduction 
 FindMyDevice is an Android App that severs as a Free and Open Source alternative to Google’s FindMyDevice. It allows you track, wipe and issue other commands to your device when its lost. 
 
+ 
+<details closed>
+<summary># 💬 SMS vs ⌨️ Messages vs 🌐 Server </summary>
+ 
 ## 2. 💬 SMS vs ⌨️ Messages vs 🌐 Server 
 FindMyDevice allows for commands and information to be sent and received via SMS, messaging apps and/or a server, depending on the configuration that has been set up.
 
@@ -45,6 +49,12 @@ One can also enable FMDServer (the checkbox at the top) that allows the applicat
 In order to receive a command from the server (locate/ring/etc...) unified push is used, therefore you need to install a distributor (like Gotify-UP or ntfy). When you send a command like ring, the server will communicate with your push-server. The push-sever will notify your phone.
 If you want to, you can register for my push-server (gotify-instance) (https://push.nulide.de:9094/#/login).
 
+</details>
+
+ 
+<details closed>
+<summary>#  🖥 Commands </summary>
+ 
 ## 3. 🖥 Commands
 
 You can set a custom prefix (default is fmd). Commands are:
@@ -88,6 +98,13 @@ For example:
 `fmd camera` takes a picture from the camera you selcted(Back/Front) and sends it encrypted to the server. When you log in to the server you will be able to view the picture by presisng the picture icon.
 
 
+</details>
+
+ 
+<details closed>
+<summary>#  Settings </summary>
+
+
 ## 4. Settings
 ### FMD delete
 Here you can enable or disable the `fmd delete` command.
@@ -109,6 +126,12 @@ Here you can add the API-Key from OpenCellID. With their service you can get the
 
 ### Permissions
 Add some features by enabling their permission, you can do this by pressing the button, which will open the Permission-Wizard.
+
+</details>
+
+ 
+<details closed>
+<summary>#  ⛓️ Extra Permissions </summary>
 
 ## 5. ⛓️ Extra Permissions
 9. For FMD to be able to turn Location Services on or off the special [`WRITE_SECURE_SETTINGS` permission](https://developer.android.com/reference/android/Manifest.permission#WRITE_SECURE_SETTINGS) is needed.
@@ -152,6 +175,13 @@ To check that it worked:
 3. Reopen FMD
 
 Under "Permissions" the entry "Secure Settings" should now be green.
+
+</details>
+
+ 
+<details closed>
+<summary>#  ❌ Known Issues </summary>
+
 ## 6. ❌ Known Issues
 
 
@@ -194,13 +224,12 @@ If you want to, you can register for my push-server(gotify-instance) (https://pu
 * [ThirdParty Support](ThirdParty)
 * [Push Support (UnifiedPush/ntfy)](PushSupport)
 
- OpenCellID is a collection of celltower and there location.
-You can register on their [page](https://opencellid.org/) and retrieve an API_KEY.
-After you've created an account go to Access Tokens and copy the token. (Something like: pk.xxxxx)
+OpenCellID is a collection of celltower and there location. You can register on their [page](https://opencellid.org/) and retrieve an API_KEY. After you've created an account go to Access Tokens and copy the token. (Something like: pk.xxxxx)
 
 Please enter this key to the settings of the application. When you than try to get the location the coordinates of the celltower will be send too.
 
-10.n FMD uses [UnifiedPush](https://unifiedpush.org/) to receive push notifications.
+## Push Notification 
+FMD uses [UnifiedPush](https://unifiedpush.org/) to receive push notifications.
 Hence you need to have a [distributor app](https://unifiedpush.org/users/distributors/) installed on your phone if you want to use push.
 Then FMD Server will act as the *application server*, and e.g. ntfy Server will act as the *push server*.
 
@@ -238,3 +267,6 @@ If you try to message FMD via RCS (Rich Communications System), FMD will not res
 ### Multi-SIM
 
 If you have more than one SIM-card inserted, please select the default sim for sms-messaging in your settings app, so FMD can automatically send data via SMS.
+
+</details>
+
