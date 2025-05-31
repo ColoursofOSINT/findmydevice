@@ -1,7 +1,7 @@
 # Findmydevice Wiki 
-This is an OLD progress wiki for findmydevice.
+This is an OLD wiki for findmydevice.
 
-[https://gitlab.com/fmd-foss/fmd-android](https://gitlab.com/fmd-foss/fmd-android)
+Go here for the app: [https://gitlab.com/fmd-foss/fmd-android](https://gitlab.com/fmd-foss/fmd-android)
 
 [1. 📱 Introduction](https://github.com/ColoursofOSINT/findmydevice#1--introduction)
 
